@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: nicholai
- * Date: 9/15/16
- * Time: 3:33 PM
+ * Date: 11/11/16
+ * Time: 5:12 PM
  */
 ?>
 
@@ -40,22 +40,32 @@
 </head>
 
 <body>
-<video id="video-bg" style="position: absolute; z-index: 1;left: 0;">
-</video>
-<canvas id="canvas" width="640" height="480" style="position: absolute; z-index: 3; left: 0;"></canvas>
-<a id="snap" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right">
-    Single Shot
-</a>
-<a id="auto" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect pull-right">
-    Continuous
-</a>
+<div class="row">
+    <video id="video-bg">
+    </video>
+    <canvas id="canvas" width="640" height="480" style="position: absolute; z-index: 3; left: 0;"></canvas>
+</div>
+<div class="row">
+    <button id="demo-menu-top-left"
+            class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">more_vert</i>
+    </button>
+
+    <ul id="options" class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+        data-mdl-for="demo-menu-top-left">
+    </ul>
+</div>
 <canvas id="canvas_hidden" style="display: none;" width="640" height="480"></canvas>
+<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button"></button>
+</div>
 <script src="js/material/material.min.js"></script>
 <!-- Javascript -->
 <script
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script><!-- custom js -->
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/train.js"></script>
 </body>
 </html>
